@@ -34,7 +34,7 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         setResizable(false);
 
         startmenupanel.setBackground(new java.awt.Color(64, 64, 64));
-        startmenupanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        startmenupanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
         startmenupanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         startmenupanel.setMaximumSize(new java.awt.Dimension(500, 500));
         startmenupanel.setMinimumSize(new java.awt.Dimension(500, 500));
@@ -86,7 +86,7 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         titlelabel.setFont(new java.awt.Font("Impact", 0, 48)); // NOI18N
         titlelabel.setForeground(new java.awt.Color(255, 255, 255));
         titlelabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titlelabel.setText("Tic Tac Toe");
+        titlelabel.setText(" Tic Tac Toe");
         titlelabel.setAlignmentX(0.5F);
         titlelabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         titlelabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -110,15 +110,15 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         startmenupanelLayout.setVerticalGroup(
             startmenupanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(startmenupanelLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(30, 30, 30)
                 .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(soundfxbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(musicbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         startButton.getAccessibleContext().setAccessibleDescription("Start Game Button");
