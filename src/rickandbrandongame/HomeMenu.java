@@ -25,54 +25,57 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
 
         startmenupanel = new javax.swing.JPanel();
         startButton = new javax.swing.JButton();
+        soundfxbutton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(500, 500));
         setName("HomeMenu"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(500, 500));
         setResizable(false);
 
-        startmenupanel.setBackground(new java.awt.Color(255, 255, 255));
+        startmenupanel.setBackground(new java.awt.Color(64, 64, 64));
+        startmenupanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        startmenupanel.setMaximumSize(new java.awt.Dimension(500, 500));
+        startmenupanel.setMinimumSize(new java.awt.Dimension(500, 500));
         startmenupanel.setName("HomeMenuPanel"); // NOI18N
 
-        startButton.setBackground(new java.awt.Color(64, 64, 64));
+        startButton.setBackground(new java.awt.Color(255, 255, 255));
         startButton.setFont(new java.awt.Font("Impact", 0, 48)); // NOI18N
-        startButton.setForeground(new java.awt.Color(255, 255, 255));
+        startButton.setForeground(new java.awt.Color(64, 64, 64));
         startButton.setText("Start");
         startButton.setToolTipText("");
-        startButton.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        startButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.black, java.awt.Color.black));
+        startButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        startButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startButton.setIconTextGap(0);
+        startButton.setMaximumSize(new java.awt.Dimension(300, 75));
+        startButton.setMinimumSize(new java.awt.Dimension(300, 75));
+        startButton.setName(""); // NOI18N
         startButton.setPreferredSize(new java.awt.Dimension(300, 75));
         startButton.addActionListener(this);
-
-        javax.swing.GroupLayout startmenupanelLayout = new javax.swing.GroupLayout(startmenupanel);
-        startmenupanel.setLayout(startmenupanelLayout);
-        startmenupanelLayout.setHorizontalGroup(
-            startmenupanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, startmenupanelLayout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
-                .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
-        );
-        startmenupanelLayout.setVerticalGroup(
-            startmenupanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(startmenupanelLayout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(314, Short.MAX_VALUE))
-        );
-
-        startButton.getAccessibleContext().setAccessibleName("Start");
+        startmenupanel.add(startButton);
         startButton.getAccessibleContext().setAccessibleDescription("Start Game Button");
+
+        soundfxbutton.setBackground(new java.awt.Color(255, 255, 255));
+        soundfxbutton.setFont(new java.awt.Font("Impact", 0, 48)); // NOI18N
+        soundfxbutton.setForeground(new java.awt.Color(64, 64, 64));
+        soundfxbutton.setText("Sound FX");
+        soundfxbutton.setToolTipText("");
+        soundfxbutton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.black, new java.awt.Color(0, 0, 0)));
+        soundfxbutton.setMaximumSize(new java.awt.Dimension(300, 75));
+        soundfxbutton.setMinimumSize(new java.awt.Dimension(300, 75));
+        soundfxbutton.setPreferredSize(new java.awt.Dimension(300, 75));
+        soundfxbutton.addActionListener(this);
+        startmenupanel.add(soundfxbutton);
+        soundfxbutton.getAccessibleContext().setAccessibleDescription("Turn sound FX on and off");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(startmenupanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(startmenupanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(startmenupanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(startmenupanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -84,6 +87,9 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         if (evt.getSource() == startButton) {
             HomeMenu.this.startButtonActionPerformed(evt);
         }
+        else if (evt.getSource() == soundfxbutton) {
+            HomeMenu.this.soundfxbuttonActionPerformed(evt);
+        }
     }// </editor-fold>//GEN-END:initComponents
 
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
@@ -93,7 +99,12 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         });
     }//GEN-LAST:event_startButtonActionPerformed
 
+    private void soundfxbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soundfxbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_soundfxbuttonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton soundfxbutton;
     private javax.swing.JButton startButton;
     private javax.swing.JPanel startmenupanel;
     // End of variables declaration//GEN-END:variables
