@@ -25,10 +25,8 @@ public class RickAndBrandonGame {
         
         
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new HomeMenu().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new HomeMenu().setVisible(true);
         });
     }//End Main
 }//End Class
