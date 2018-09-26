@@ -25,8 +25,6 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
 
         startmenupanel = new javax.swing.JPanel();
         startButton = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(500, 500));
@@ -34,15 +32,17 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         setPreferredSize(new java.awt.Dimension(500, 500));
         setResizable(false);
 
+        startmenupanel.setBackground(new java.awt.Color(255, 255, 255));
         startmenupanel.setName("HomeMenuPanel"); // NOI18N
 
+        startButton.setBackground(new java.awt.Color(64, 64, 64));
+        startButton.setFont(new java.awt.Font("Impact", 0, 48)); // NOI18N
+        startButton.setForeground(new java.awt.Color(255, 255, 255));
         startButton.setText("Start");
         startButton.setToolTipText("");
+        startButton.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         startButton.setPreferredSize(new java.awt.Dimension(300, 75));
         startButton.addActionListener(this);
-
-        jTextPane1.setText("Rick and Brandon's Game");
-        jScrollPane1.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout startmenupanelLayout = new javax.swing.GroupLayout(startmenupanel);
         startmenupanel.setLayout(startmenupanelLayout);
@@ -52,19 +52,13 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
                 .addContainerGap(91, Short.MAX_VALUE)
                 .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(109, 109, 109))
-            .addGroup(startmenupanelLayout.createSequentialGroup()
-                .addGap(243, 243, 243)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         startmenupanelLayout.setVerticalGroup(
             startmenupanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(startmenupanelLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(111, 111, 111)
                 .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(314, Short.MAX_VALUE))
         );
 
         startButton.getAccessibleContext().setAccessibleName("Start");
@@ -97,8 +91,6 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
     }//GEN-LAST:event_startButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JButton startButton;
     private javax.swing.JPanel startmenupanel;
     // End of variables declaration//GEN-END:variables
