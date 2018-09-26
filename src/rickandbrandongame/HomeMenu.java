@@ -27,6 +27,7 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         startButton = new javax.swing.JButton();
         soundfxbutton = new javax.swing.JButton();
         musicbutton = new javax.swing.JButton();
+        titlelabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("HomeMenu"); // NOI18N
@@ -81,6 +82,18 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         musicbutton.setPreferredSize(new java.awt.Dimension(300, 75));
         musicbutton.addActionListener(this);
 
+        titlelabel.setBackground(new java.awt.Color(64, 64, 64));
+        titlelabel.setFont(new java.awt.Font("Impact", 0, 48)); // NOI18N
+        titlelabel.setForeground(new java.awt.Color(255, 255, 255));
+        titlelabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titlelabel.setText("Tic Tac Toe");
+        titlelabel.setAlignmentX(0.5F);
+        titlelabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        titlelabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        titlelabel.setMaximumSize(new java.awt.Dimension(300, 75));
+        titlelabel.setMinimumSize(new java.awt.Dimension(300, 75));
+        titlelabel.setPreferredSize(new java.awt.Dimension(300, 75));
+
         javax.swing.GroupLayout startmenupanelLayout = new javax.swing.GroupLayout(startmenupanel);
         startmenupanel.setLayout(startmenupanelLayout);
         startmenupanelLayout.setHorizontalGroup(
@@ -88,6 +101,7 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
             .addGroup(startmenupanelLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(startmenupanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(musicbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(soundfxbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -96,13 +110,15 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         startmenupanelLayout.setVerticalGroup(
             startmenupanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(startmenupanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
+                .addGap(57, 57, 57)
+                .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(soundfxbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(musicbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         startButton.getAccessibleContext().setAccessibleDescription("Start Game Button");
@@ -160,5 +176,6 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JButton soundfxbutton;
     private javax.swing.JButton startButton;
     private javax.swing.JPanel startmenupanel;
+    private javax.swing.JLabel titlelabel;
     // End of variables declaration//GEN-END:variables
 }
