@@ -9,7 +9,6 @@ package rickandbrandongame;
  * @author Pussy Whisperer
  */
 public class GameController {
-    
     //Constructor
     GameController(){
         
