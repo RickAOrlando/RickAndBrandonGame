@@ -46,6 +46,7 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         startButton.setForeground(new java.awt.Color(64, 64, 64));
         startButton.setText("Start");
         startButton.setToolTipText("");
+        startButton.setAlignmentX(0.5F);
         startButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.black, java.awt.Color.black));
         startButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         startButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -60,10 +61,12 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         soundfxbutton.setForeground(new java.awt.Color(64, 64, 64));
         soundfxbutton.setText("Sound FX");
         soundfxbutton.setToolTipText("");
+        soundfxbutton.setAlignmentX(0.5F);
         soundfxbutton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.black, new java.awt.Color(0, 0, 0)));
         soundfxbutton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         soundfxbutton.setMaximumSize(new java.awt.Dimension(300, 75));
         soundfxbutton.setMinimumSize(new java.awt.Dimension(300, 75));
+        soundfxbutton.setName(""); // NOI18N
         soundfxbutton.setPreferredSize(new java.awt.Dimension(300, 75));
         soundfxbutton.addActionListener(this);
 
@@ -99,7 +102,7 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
                 .addComponent(soundfxbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(musicbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         startButton.getAccessibleContext().setAccessibleDescription("Start Game Button");
