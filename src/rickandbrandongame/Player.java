@@ -15,8 +15,7 @@ public class Player {
     //Constructor
     Player(String name, String playerMarker){
         this.name = name;
-        this.playerMarker = playerMarker;
-        
+        this.playerMarker = playerMarker; 
     }//End constructor
 
     /**
