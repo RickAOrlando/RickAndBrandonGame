@@ -93,7 +93,10 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
     }// </editor-fold>//GEN-END:initComponents
 
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
-        // TODO add your handling code here:
+                /* Create and display the Main Game Form */
+        java.awt.EventQueue.invokeLater(() -> {
+            new MainGameFrame().setVisible(true);
+        });
     }//GEN-LAST:event_startButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
