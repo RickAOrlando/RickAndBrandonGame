@@ -18,6 +18,11 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
     public HomeMenu() {
         initComponents();
     }
+    /*
+    TODO -- SOUND FX
+    Player O - "Ohh ohh" its magic
+    Player X - "X gon' give it to ya
+    */
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
