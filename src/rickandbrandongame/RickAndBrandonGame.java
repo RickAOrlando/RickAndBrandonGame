@@ -17,5 +17,6 @@ public class RickAndBrandonGame {
         // TODO code application logic here
         // You wassup fag boy go kys
         // Ok I will do that right now.
+        // Normal conversation between brothers on 9/26/18
     }
 }
