@@ -176,6 +176,9 @@ public class HomeMenu extends javax.swing.JFrame implements ActionListener {
         });
     }//GEN-LAST:event_startButtonActionPerformed
 
+    //Code Review -- naming conventions for variables and buttons is incorrect
+    // Example: testVariable
+    // Note that the first word is lowercase, and the second word starts uppercase
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton musicbutton;
     private javax.swing.JButton soundfxbutton;
