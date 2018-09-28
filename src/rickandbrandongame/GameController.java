@@ -13,8 +13,8 @@ public class GameController {
     private String player = "x";
     
     //Constructor
-    GameController(){
-        testPlayerSwitch();   
+    GameController(){ 
+        
     }
     
     public void switchPlayer(){
