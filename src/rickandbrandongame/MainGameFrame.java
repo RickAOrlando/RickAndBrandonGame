@@ -16,6 +16,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     
     public MainGameFrame() {
         initComponents();
+        GameController gc = new GameController();
     }
 
     @SuppressWarnings("unchecked")
