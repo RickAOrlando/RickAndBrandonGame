@@ -12,17 +12,14 @@ import java.util.ArrayList;
  */
 public class GameController {
     //Global variables
-    ArrayList playerList = new ArrayList();
+    
     
     //Constructor
     GameController(){
         
     }//End Contructor
     
-    public void createPlayer(){
-        //user input for player name argument
-        //alternatly assign markers for player marker argument
-        Player player = new Player("player name","player marker"); 
-        playerList.add(player);
+    public void switchPlayer(){
+        
     }
 }//End Class
