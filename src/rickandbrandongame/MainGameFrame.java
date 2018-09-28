@@ -16,7 +16,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     
     public MainGameFrame() {
         initComponents();
-        GameController gc = new GameController();
+        control = new GameController();
     }
 
     @SuppressWarnings("unchecked")
@@ -185,39 +185,48 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     }// </editor-fold>//GEN-END:initComponents
 
     private void gameButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton1ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton1.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton1ActionPerformed
 
     private void gameButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton5ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton5.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton5ActionPerformed
 
     private void gameButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton4ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton4.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton4ActionPerformed
 
     private void gameButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton2ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton2.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton2ActionPerformed
 
     private void gameButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton6ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton6.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton6ActionPerformed
 
     private void gameButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton7ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton7.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton7ActionPerformed
 
     private void gameButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton3ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton3.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton3ActionPerformed
 
     private void gameButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton9ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton9.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton9ActionPerformed
 
     private void gameButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton8ActionPerformed
-        // TODO add your handling code here:
+        this.gameButton8.setText(control.getPlayer());
+        control.switchPlayer();
     }//GEN-LAST:event_gameButton8ActionPerformed
 
 
