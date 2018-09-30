@@ -457,12 +457,12 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
             checkDiag1Winner()|| checkDiag2Winner()){
             winnerLabel.setText(control.getPlayer().toUpperCase() + " WINS!");
                 if (control.getPlayer().equalsIgnoreCase("x")){
-                    control.setXWinCount(control.getxWinCount()+1);
-                    this.xWinLabel.setText("X wins: "+control.getxWinCount());
+                    control.setXWinCount(control.getXWinCount()+1);
+                    this.xWinLabel.setText("X wins: "+control.getXWinCount());
                 }
                 if (control.getPlayer().equalsIgnoreCase("o")){
-                    control.setOWinCount(control.getyWinCount()+1);
-                    this.yWinLabel1.setText("O wins: "+control.getyWinCount());
+                    control.setOWinCount(control.getYWinCount()+1);
+                    this.yWinLabel1.setText("O wins: "+control.getYWinCount());
                 }
         }
     }
