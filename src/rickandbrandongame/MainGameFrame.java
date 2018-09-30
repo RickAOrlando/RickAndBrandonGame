@@ -274,8 +274,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton3ActionPerformed
         if (this.gameButton3.getText().equalsIgnoreCase("")){
            this.gameButton3.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         }   
     }//GEN-LAST:event_gameButton3ActionPerformed
@@ -283,8 +283,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton1ActionPerformed
         if (this.gameButton1.getText().equalsIgnoreCase("")){
            this.gameButton1.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton1ActionPerformed
@@ -292,8 +292,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton2ActionPerformed
         if (this.gameButton2.getText().equalsIgnoreCase("")){
            this.gameButton2.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton2ActionPerformed
@@ -301,8 +301,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton6ActionPerformed
         if (this.gameButton6.getText().equalsIgnoreCase("")){
            this.gameButton6.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton6ActionPerformed
@@ -310,8 +310,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton5ActionPerformed
         if (this.gameButton5.getText().equalsIgnoreCase("")){
            this.gameButton5.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton5ActionPerformed
@@ -319,8 +319,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton4ActionPerformed
         if (this.gameButton4.getText().equalsIgnoreCase("")){
            this.gameButton4.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton4ActionPerformed
@@ -328,8 +328,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton7ActionPerformed
         if (this.gameButton7.getText().equalsIgnoreCase("")){
            this.gameButton7.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton7ActionPerformed
@@ -337,8 +337,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton8ActionPerformed
         if (this.gameButton8.getText().equalsIgnoreCase("")){
            this.gameButton8.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton8ActionPerformed
@@ -346,8 +346,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private void gameButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton9ActionPerformed
         if (this.gameButton9.getText().equalsIgnoreCase("")){
            this.gameButton9.setText(control.getPlayer()); 
-           declareWinner();
            checkTie();
+           declareWinner();
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton9ActionPerformed
@@ -457,11 +457,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
             checkDiag1Winner()|| checkDiag2Winner()){
             winnerLabel.setText(control.getPlayer().toUpperCase() + " WINS!");
                 if (control.getPlayer().equalsIgnoreCase("x")){
-                    control.setxWinCount(control.getxWinCount()+1);
+                    control.setXWinCount(control.getxWinCount()+1);
                     this.xWinLabel.setText("X wins: "+control.getxWinCount());
                 }
                 if (control.getPlayer().equalsIgnoreCase("o")){
-                    control.setyWinCount(control.getyWinCount()+1);
+                    control.setOWinCount(control.getyWinCount()+1);
                     this.yWinLabel1.setText("O wins: "+control.getyWinCount());
                 }
         }
