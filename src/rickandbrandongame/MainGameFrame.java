@@ -308,15 +308,6 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         return false;
     }
     
-    public boolean checkRow1Nullable(){
-        if (gameButton1.getText().equalsIgnoreCase(null) && 
-            gameButton2.getText().equalsIgnoreCase(null) &&
-            gameButton3.getText().equalsIgnoreCase(null)){        
-        return true;
-        }
-        return false;
-    }
-    
     public boolean checkRow2Winner(){
         if (gameButton4.getText().equalsIgnoreCase(control.getPlayer()) && 
             gameButton5.getText().equalsIgnoreCase(control.getPlayer()) &&
@@ -324,15 +315,6 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         return true;
         }
         return false;
-    }
-    
-    public boolean checkRow2Nullable(){
-    if (gameButton2.getText().equalsIgnoreCase(null) && 
-        gameButton3.getText().equalsIgnoreCase(null) &&
-        gameButton4.getText().equalsIgnoreCase(null)){        
-    return true;
-        }   
-    return false;
     }
     
     public boolean checkRow3Winner(){
@@ -344,15 +326,6 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         return false;
     }
     
-    public boolean checkRow3Nullable(){
-    if (gameButton6.getText().equalsIgnoreCase(null) && 
-        gameButton7.getText().equalsIgnoreCase(null) &&
-        gameButton8.getText().equalsIgnoreCase(null)){        
-    return true;
-        }
-    return false;
-    }
-    
     public boolean checkCol1Winner(){
         if (gameButton1.getText().equalsIgnoreCase(control.getPlayer()) && 
             gameButton4.getText().equalsIgnoreCase(control.getPlayer()) &&
@@ -360,15 +333,6 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         return true;
         }
         return false;
-    }
-    
-    public boolean checkCol1Nullable(){
-    if (gameButton1.getText().equalsIgnoreCase(null) && 
-        gameButton4.getText().equalsIgnoreCase(null) &&
-        gameButton7.getText().equalsIgnoreCase(null)){        
-    return true;
-        }
-    return false;
     }
     
     public boolean checkCol2Winner(){      
@@ -380,15 +344,6 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         return false;
     }
     
-    public boolean checkCol2Nullable(){
-    if (gameButton2.getText().equalsIgnoreCase(null) && 
-        gameButton5.getText().equalsIgnoreCase(null) &&
-        gameButton8.getText().equalsIgnoreCase(null)){        
-    return true;
-        }
-    return false;
-    }
-    
     public boolean checkCol3Winner(){
         if (gameButton3.getText().equalsIgnoreCase(control.getPlayer()) && 
             gameButton6.getText().equalsIgnoreCase(control.getPlayer()) &&
@@ -396,15 +351,6 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         return true;
         }
         return false;
-    }
-    
-    public boolean checkCol3Nullable(){
-    if (gameButton3.getText().equalsIgnoreCase(null) && 
-        gameButton6.getText().equalsIgnoreCase(null) &&
-        gameButton9.getText().equalsIgnoreCase(null)){        
-    return true;
-        }
-    return false;
     }
     
     public boolean checkDiag1Winner(){
