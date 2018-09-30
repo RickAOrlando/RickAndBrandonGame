@@ -5,6 +5,8 @@
 package rickandbrandongame;
 
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.JButton;
 
 /**
  *
@@ -17,6 +19,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     public MainGameFrame() {
         initComponents();
         control = new GameController();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -33,6 +36,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         gameButton3 = new javax.swing.JButton();
         gameButton9 = new javax.swing.JButton();
         gameButton8 = new javax.swing.JButton();
+        winnerLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(500, 500, 500, 500));
@@ -121,6 +125,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         gameButton8.setPreferredSize(new java.awt.Dimension(125, 125));
         gameButton8.addActionListener(this);
 
+        winnerLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        winnerLabel.setForeground(new java.awt.Color(255, 0, 0));
+        winnerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        winnerLabel.setBorder(new javax.swing.border.MatteBorder(null));
+
         javax.swing.GroupLayout gameBoardPanelLayout = new javax.swing.GroupLayout(gameBoardPanel);
         gameBoardPanel.setLayout(gameBoardPanelLayout);
         gameBoardPanelLayout.setHorizontalGroup(
@@ -132,10 +141,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
                     .addComponent(gameButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(gameButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(gameButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(gameButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(gameButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(winnerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(gameButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(gameButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(gameButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(gameButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -146,7 +156,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         gameBoardPanelLayout.setVerticalGroup(
             gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameBoardPanelLayout.createSequentialGroup()
-                .addGap(0, 45, Short.MAX_VALUE)
+                .addComponent(winnerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameBoardPanelLayout.createSequentialGroup()
                         .addComponent(gameButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,13 +183,13 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gameBoardPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(gameBoardPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
 
@@ -188,11 +199,14 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     // Code for dispatching events from components to event handlers.
 
     public void actionPerformed(java.awt.event.ActionEvent evt) {
-        if (evt.getSource() == gameButton3) {
-            MainGameFrame.this.gameButton3ActionPerformed(evt);
-        }
-        else if (evt.getSource() == gameButton1) {
+        if (evt.getSource() == gameButton1) {
             MainGameFrame.this.gameButton1ActionPerformed(evt);
+        }
+        else if (evt.getSource() == gameButton4) {
+            MainGameFrame.this.gameButton4ActionPerformed(evt);
+        }
+        else if (evt.getSource() == gameButton5) {
+            MainGameFrame.this.gameButton5ActionPerformed(evt);
         }
         else if (evt.getSource() == gameButton2) {
             MainGameFrame.this.gameButton2ActionPerformed(evt);
@@ -200,69 +214,208 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         else if (evt.getSource() == gameButton6) {
             MainGameFrame.this.gameButton6ActionPerformed(evt);
         }
-        else if (evt.getSource() == gameButton5) {
-            MainGameFrame.this.gameButton5ActionPerformed(evt);
-        }
-        else if (evt.getSource() == gameButton4) {
-            MainGameFrame.this.gameButton4ActionPerformed(evt);
-        }
         else if (evt.getSource() == gameButton7) {
             MainGameFrame.this.gameButton7ActionPerformed(evt);
         }
-        else if (evt.getSource() == gameButton8) {
-            MainGameFrame.this.gameButton8ActionPerformed(evt);
+        else if (evt.getSource() == gameButton3) {
+            MainGameFrame.this.gameButton3ActionPerformed(evt);
         }
         else if (evt.getSource() == gameButton9) {
             MainGameFrame.this.gameButton9ActionPerformed(evt);
         }
+        else if (evt.getSource() == gameButton8) {
+            MainGameFrame.this.gameButton8ActionPerformed(evt);
+        }
     }// </editor-fold>//GEN-END:initComponents
 
     private void gameButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton3ActionPerformed
-        this.gameButton3.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton3.getText().equalsIgnoreCase("")){
+           this.gameButton3.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        }   
     }//GEN-LAST:event_gameButton3ActionPerformed
 
     private void gameButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton1ActionPerformed
-        this.gameButton1.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton1.getText().equalsIgnoreCase("")){
+           this.gameButton1.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton1ActionPerformed
 
     private void gameButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton2ActionPerformed
-        this.gameButton2.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton2.getText().equalsIgnoreCase("")){
+           this.gameButton2.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton2ActionPerformed
 
     private void gameButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton6ActionPerformed
-        this.gameButton6.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton6.getText().equalsIgnoreCase("")){
+           this.gameButton6.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton6ActionPerformed
 
     private void gameButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton5ActionPerformed
-        this.gameButton5.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton5.getText().equalsIgnoreCase("")){
+           this.gameButton5.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton5ActionPerformed
 
     private void gameButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton4ActionPerformed
-        this.gameButton4.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton4.getText().equalsIgnoreCase("")){
+           this.gameButton4.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton4ActionPerformed
 
     private void gameButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton7ActionPerformed
-        this.gameButton7.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton7.getText().equalsIgnoreCase("")){
+           this.gameButton7.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton7ActionPerformed
 
     private void gameButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton8ActionPerformed
-        this.gameButton8.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton8.getText().equalsIgnoreCase("")){
+           this.gameButton8.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton8ActionPerformed
 
     private void gameButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton9ActionPerformed
-        this.gameButton9.setText(control.getPlayer());
-        control.switchPlayer();
+        if (this.gameButton9.getText().equalsIgnoreCase("")){
+           this.gameButton9.setText(control.getPlayer()); 
+           declareWinner();
+           control.switchPlayer();
+        } 
     }//GEN-LAST:event_gameButton9ActionPerformed
 
+    public boolean checkRow1Winner(){
+        if (gameButton1.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton2.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton3.getText().equalsIgnoreCase(control.getPlayer())){        
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkRow1Nullable(){
+        if (gameButton1.getText().equalsIgnoreCase(null) && 
+            gameButton2.getText().equalsIgnoreCase(null) &&
+            gameButton3.getText().equalsIgnoreCase(null)){        
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkRow2Winner(){
+        if (gameButton4.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton5.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton6.getText().equalsIgnoreCase(control.getPlayer())){       
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkRow2Nullable(){
+    if (gameButton2.getText().equalsIgnoreCase(null) && 
+        gameButton3.getText().equalsIgnoreCase(null) &&
+        gameButton4.getText().equalsIgnoreCase(null)){        
+    return true;
+        }   
+    return false;
+    }
+    
+    public boolean checkRow3Winner(){
+        if (gameButton7.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton8.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton9.getText().equalsIgnoreCase(control.getPlayer())){         
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkRow3Nullable(){
+    if (gameButton6.getText().equalsIgnoreCase(null) && 
+        gameButton7.getText().equalsIgnoreCase(null) &&
+        gameButton8.getText().equalsIgnoreCase(null)){        
+    return true;
+        }
+    return false;
+    }
+    
+    public boolean checkCol1Winner(){
+        if (gameButton1.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton4.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton7.getText().equalsIgnoreCase(control.getPlayer())){         
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkCol1Nullable(){
+    if (gameButton1.getText().equalsIgnoreCase(null) && 
+        gameButton4.getText().equalsIgnoreCase(null) &&
+        gameButton7.getText().equalsIgnoreCase(null)){        
+    return true;
+        }
+    return false;
+    }
+    
+    public boolean checkCol2Winner(){      
+        if (gameButton2.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton5.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton8.getText().equalsIgnoreCase(control.getPlayer())){         
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkCol2Nullable(){
+    if (gameButton2.getText().equalsIgnoreCase(null) && 
+        gameButton5.getText().equalsIgnoreCase(null) &&
+        gameButton8.getText().equalsIgnoreCase(null)){        
+    return true;
+        }
+    return false;
+    }
+    
+    public boolean checkCol3Winner(){
+        if (gameButton3.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton6.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton9.getText().equalsIgnoreCase(control.getPlayer())){        
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkCol3Nullable(){
+    if (gameButton3.getText().equalsIgnoreCase(null) && 
+        gameButton6.getText().equalsIgnoreCase(null) &&
+        gameButton9.getText().equalsIgnoreCase(null)){        
+    return true;
+        }
+    return false;
+    }
+    
+    public void declareWinner(){
+        if (checkRow1Winner() || checkRow2Winner() || checkRow3Winner() ||
+            checkCol1Winner() || checkCol2Winner() || checkCol3Winner()){
+            winnerLabel.setText(control.getPlayer().toUpperCase() + " WINS!");
+        }
+    }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel gameBoardPanel;
     private javax.swing.JButton gameButton1;
@@ -274,5 +427,6 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JButton gameButton7;
     private javax.swing.JButton gameButton8;
     private javax.swing.JButton gameButton9;
+    private javax.swing.JLabel winnerLabel;
     // End of variables declaration//GEN-END:variables
 }
