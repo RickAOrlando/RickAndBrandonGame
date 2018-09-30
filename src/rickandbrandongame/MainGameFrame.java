@@ -5,8 +5,7 @@
 package rickandbrandongame;
 
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import javax.swing.JButton;
+
 
 /**
  *
@@ -408,9 +407,28 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     return false;
     }
     
+    public boolean checkDiag1Winner(){
+        if (gameButton1.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton5.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton9.getText().equalsIgnoreCase(control.getPlayer())){         
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean checkDiag2Winner(){
+        if (gameButton3.getText().equalsIgnoreCase(control.getPlayer()) && 
+            gameButton5.getText().equalsIgnoreCase(control.getPlayer()) &&
+            gameButton7.getText().equalsIgnoreCase(control.getPlayer())){         
+        return true;
+        }
+        return false;
+    }
+    
     public void declareWinner(){
         if (checkRow1Winner() || checkRow2Winner() || checkRow3Winner() ||
-            checkCol1Winner() || checkCol2Winner() || checkCol3Winner()){
+            checkCol1Winner() || checkCol2Winner() || checkCol3Winner() ||
+            checkDiag1Winner()|| checkDiag2Winner()){
             winnerLabel.setText(control.getPlayer().toUpperCase() + " WINS!");
         }
     }
