@@ -36,6 +36,10 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         gameButton9 = new javax.swing.JButton();
         gameButton8 = new javax.swing.JButton();
         winnerLabel = new javax.swing.JLabel();
+        xWinLabel = new javax.swing.JLabel();
+        xWinCountLabel = new javax.swing.JLabel();
+        yWinLabel1 = new javax.swing.JLabel();
+        yWinCountLabel = new javax.swing.JLabel();
         resetButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -130,37 +134,60 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         winnerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         winnerLabel.setBorder(new javax.swing.border.MatteBorder(null));
 
+        xWinLabel.setForeground(new java.awt.Color(0, 204, 204));
+        xWinLabel.setText("X wins:");
+
+        yWinLabel1.setForeground(new java.awt.Color(0, 204, 204));
+        yWinLabel1.setText("Y wins:");
+
         javax.swing.GroupLayout gameBoardPanelLayout = new javax.swing.GroupLayout(gameBoardPanel);
         gameBoardPanel.setLayout(gameBoardPanelLayout);
         gameBoardPanelLayout.setHorizontalGroup(
             gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
-                .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(gameButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(gameButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(gameButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(gameButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(gameButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(gameButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(gameButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(gameButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(gameButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(49, Short.MAX_VALUE))
-            .addGroup(gameBoardPanelLayout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(gameBoardPanelLayout.createSequentialGroup()
+                        .addComponent(xWinLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(xWinCountLabel)
+                        .addGap(39, 39, 39)
+                        .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(yWinLabel1))
+                    .addGroup(gameBoardPanelLayout.createSequentialGroup()
+                        .addGap(0, 34, Short.MAX_VALUE)
+                        .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(gameButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(gameButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(gameButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(gameButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(gameButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(gameButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(gameButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(gameButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(gameButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(yWinCountLabel)
+                .addGap(11, 11, 11))
         );
         gameBoardPanelLayout.setVerticalGroup(
             gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameBoardPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(xWinLabel)
+                        .addComponent(xWinCountLabel))
+                    .addGroup(gameBoardPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(yWinCountLabel)
+                            .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(yWinLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameBoardPanelLayout.createSequentialGroup()
@@ -192,7 +219,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(gameBoardPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(146, 146, 146)
+                .addGap(160, 160, 160)
                 .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -429,6 +456,14 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
             checkCol1Winner() || checkCol2Winner() || checkCol3Winner() ||
             checkDiag1Winner()|| checkDiag2Winner()){
             winnerLabel.setText(control.getPlayer().toUpperCase() + " WINS!");
+                if (control.getPlayer().equalsIgnoreCase("x")){
+                    control.setxWinCount(control.getxWinCount()+1);
+                    this.xWinLabel.setText("X wins: "+control.getxWinCount());
+                }
+                if (control.getPlayer().equalsIgnoreCase("o")){
+                    control.setyWinCount(control.getyWinCount()+1);
+                    this.yWinLabel1.setText("O wins: "+control.getyWinCount());
+                }
         }
     }
 
@@ -446,5 +481,9 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JButton gameButton9;
     private javax.swing.JButton resetButton;
     private javax.swing.JLabel winnerLabel;
+    private javax.swing.JLabel xWinCountLabel;
+    private javax.swing.JLabel xWinLabel;
+    private javax.swing.JLabel yWinCountLabel;
+    private javax.swing.JLabel yWinLabel1;
     // End of variables declaration//GEN-END:variables
 }

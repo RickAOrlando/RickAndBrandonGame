@@ -31,7 +31,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="gameBoardPanel" alignment="1" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
               <Component id="resetButton" min="-2" pref="173" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -61,38 +61,61 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="40" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="gameButton4" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
-                      <Component id="gameButton7" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
-                      <Component id="gameButton1" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="xWinLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="xWinCountLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="winnerLabel" min="-2" pref="214" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="yWinLabel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="gameButton4" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="gameButton7" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="gameButton1" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="gameButton8" alignment="0" max="32767" attributes="0"/>
+                              <Component id="gameButton5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="gameButton2" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="gameButton6" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="gameButton9" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="gameButton3" min="-2" pref="125" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="gameButton8" alignment="0" max="32767" attributes="0"/>
-                      <Component id="gameButton5" alignment="0" max="32767" attributes="0"/>
-                      <Component id="gameButton2" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="gameButton6" min="-2" pref="125" max="-2" attributes="0"/>
-                      <Component id="gameButton9" min="-2" pref="125" max="-2" attributes="0"/>
-                      <Component id="gameButton3" min="-2" pref="125" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
-                  <Component id="winnerLabel" min="-2" pref="214" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                  <Component id="yWinCountLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="winnerLabel" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="xWinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="xWinCountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="yWinCountLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="winnerLabel" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="yWinLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace pref="29" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
@@ -454,6 +477,26 @@
               </Border>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="xWinLabel">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="X wins:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="xWinCountLabel">
+        </Component>
+        <Component class="javax.swing.JLabel" name="yWinLabel1">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Y wins:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="yWinCountLabel">
         </Component>
       </SubComponents>
     </Container>
