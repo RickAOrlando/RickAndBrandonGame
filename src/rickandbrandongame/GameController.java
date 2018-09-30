@@ -11,6 +11,8 @@ package rickandbrandongame;
 public class GameController {
     //Global variables
     private String player = "x";
+    private int xWinCount = 0;
+    private int yWinCount = 0;
     
     //Constructor
     GameController(){ 
@@ -48,5 +50,33 @@ public class GameController {
      */
     public void setPlayer(String player) {
         this.player = player;
+    }
+
+    /**
+     * @return the xWinCount
+     */
+    public int getxWinCount() {
+        return xWinCount;
+    }
+
+    /**
+     * @param xWinCount the xWinCount to set
+     */
+    public void setxWinCount(int xWinCount) {
+        this.xWinCount = xWinCount;
+    }
+
+    /**
+     * @return the yWinCount
+     */
+    public int getyWinCount() {
+        return yWinCount;
+    }
+
+    /**
+     * @param yWinCount the yWinCount to set
+     */
+    public void setyWinCount(int yWinCount) {
+        this.yWinCount = yWinCount;
     }
 }//End Class
