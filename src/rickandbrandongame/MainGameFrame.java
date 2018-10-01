@@ -38,7 +38,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         winnerLabel = new javax.swing.JLabel();
         xWinLabel = new javax.swing.JLabel();
         xWinCountLabel = new javax.swing.JLabel();
-        yWinLabel1 = new javax.swing.JLabel();
+        oWinLabel1 = new javax.swing.JLabel();
         yWinCountLabel = new javax.swing.JLabel();
         resetButton = new javax.swing.JButton();
 
@@ -137,8 +137,8 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         xWinLabel.setForeground(new java.awt.Color(0, 204, 204));
         xWinLabel.setText("X wins:");
 
-        yWinLabel1.setForeground(new java.awt.Color(0, 204, 204));
-        yWinLabel1.setText("Y wins:");
+        oWinLabel1.setForeground(new java.awt.Color(0, 204, 204));
+        oWinLabel1.setText("Y wins:");
 
         javax.swing.GroupLayout gameBoardPanelLayout = new javax.swing.GroupLayout(gameBoardPanel);
         gameBoardPanel.setLayout(gameBoardPanelLayout);
@@ -158,7 +158,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(62, 62, 62)))
-                        .addComponent(yWinLabel1))
+                        .addComponent(oWinLabel1))
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addGap(0, 34, Short.MAX_VALUE)
                         .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +186,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
                     .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(xWinLabel)
                         .addComponent(xWinCountLabel))
-                    .addComponent(yWinLabel1)
+                    .addComponent(oWinLabel1)
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -538,7 +538,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         }
         if (control.getPlayer().equalsIgnoreCase("o")){
             control.setOWinCount(control.getOWinCount()+1);
-            this.yWinLabel1.setText("O wins: "+control.getOWinCount());
+            this.oWinLabel1.setText("O wins: "+control.getOWinCount());
         }    
     }
     
@@ -562,11 +562,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JButton gameButton7;
     private javax.swing.JButton gameButton8;
     private javax.swing.JButton gameButton9;
+    private javax.swing.JLabel oWinLabel1;
     private javax.swing.JButton resetButton;
     private javax.swing.JLabel winnerLabel;
     private javax.swing.JLabel xWinCountLabel;
     private javax.swing.JLabel xWinLabel;
     private javax.swing.JLabel yWinCountLabel;
-    private javax.swing.JLabel yWinLabel1;
     // End of variables declaration//GEN-END:variables
 }
