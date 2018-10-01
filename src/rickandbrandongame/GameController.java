@@ -26,17 +26,6 @@ public class GameController {
             setPlayer("x");
         }
     }
-    
-    public void testPlayerSwitch(){
-        //Testing player switch functionality
-        System.out.println(getPlayer());
-        switchPlayer();
-        System.out.println(getPlayer());
-        switchPlayer();
-        System.out.println(getPlayer());
-        switchPlayer();
-        System.out.println(getPlayer());
-    }
 
     /**
      * @return the player
@@ -55,28 +44,28 @@ public class GameController {
     /**
      * @return the xWinCount
      */
-    public int getxWinCount() {
+    public int getXWinCount() {
         return xWinCount;
     }
 
     /**
      * @param xWinCount the xWinCount to set
      */
-    public void setxWinCount(int xWinCount) {
+    public void setXWinCount(int xWinCount) {
         this.xWinCount = xWinCount;
     }
 
     /**
      * @return the yWinCount
      */
-    public int getyWinCount() {
+    public int getYWinCount() {
         return yWinCount;
     }
 
     /**
      * @param yWinCount the yWinCount to set
      */
-    public void setyWinCount(int yWinCount) {
+    public void setOWinCount(int yWinCount) {
         this.yWinCount = yWinCount;
     }
 }//End Class
