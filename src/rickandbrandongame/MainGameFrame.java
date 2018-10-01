@@ -149,11 +149,15 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addComponent(xWinLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(xWinCountLabel)
-                        .addGap(39, 39, 39)
-                        .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(gameBoardPanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(xWinCountLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameBoardPanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(62, 62, 62)))
                         .addComponent(yWinLabel1))
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addGap(0, 34, Short.MAX_VALUE)
@@ -182,12 +186,12 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
                     .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(xWinLabel)
                         .addComponent(xWinCountLabel))
+                    .addComponent(yWinLabel1)
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(yWinCountLabel)
-                            .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(yWinLabel1))
+                            .addComponent(winnerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameBoardPanelLayout.createSequentialGroup()
@@ -218,10 +222,10 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(gameBoardPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(160, 160, 160)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(162, 162, 162))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,8 +280,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton3.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        }   
+        }
     }//GEN-LAST:event_gameButton3ActionPerformed
 
     private void gameButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton1ActionPerformed
@@ -285,8 +292,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton1.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        } 
+        }
     }//GEN-LAST:event_gameButton1ActionPerformed
 
     private void gameButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton2ActionPerformed
@@ -294,8 +304,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton2.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        } 
+        }
     }//GEN-LAST:event_gameButton2ActionPerformed
 
     private void gameButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton6ActionPerformed
@@ -303,8 +316,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton6.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        } 
+        }
     }//GEN-LAST:event_gameButton6ActionPerformed
 
     private void gameButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton5ActionPerformed
@@ -312,8 +328,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton5.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        } 
+        }
     }//GEN-LAST:event_gameButton5ActionPerformed
 
     private void gameButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton4ActionPerformed
@@ -321,6 +340,9 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton4.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
         } 
     }//GEN-LAST:event_gameButton4ActionPerformed
@@ -330,8 +352,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton7.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        } 
+        }
     }//GEN-LAST:event_gameButton7ActionPerformed
 
     private void gameButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton8ActionPerformed
@@ -339,8 +364,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton8.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        } 
+        }
     }//GEN-LAST:event_gameButton8ActionPerformed
 
     private void gameButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButton9ActionPerformed
@@ -348,8 +376,11 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            this.gameButton9.setText(control.getPlayer()); 
            declareWinner();
            checkTie();
+           if (boolWinner()){
+               endMoves();
+           }
            control.switchPlayer();
-        } 
+        }
     }//GEN-LAST:event_gameButton9ActionPerformed
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
@@ -449,6 +480,45 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
                         winnerLabel.setText("Gay... a tie, congrats.");
              }
         }
+    }
+    
+    public void endMoves(){
+        if (this.gameButton1.getText().equalsIgnoreCase("")){
+            this.gameButton1.setText("*");
+        }
+        if (this.gameButton2.getText().equalsIgnoreCase("")){
+            this.gameButton2.setText("*");
+        }
+        if (this.gameButton3.getText().equalsIgnoreCase("")){
+            this.gameButton3.setText("*");
+        }
+        if (this.gameButton4.getText().equalsIgnoreCase("")){
+            this.gameButton4.setText("*");
+        }
+        if (this.gameButton5.getText().equalsIgnoreCase("")){
+            this.gameButton5.setText("*");
+        }
+        if (this.gameButton6.getText().equalsIgnoreCase("")){
+            this.gameButton6.setText("*");
+        }
+        if (this.gameButton7.getText().equalsIgnoreCase("")){
+            this.gameButton7.setText("*");
+        }
+        if (this.gameButton8.getText().equalsIgnoreCase("")){
+            this.gameButton8.setText("*");
+        }
+        if (this.gameButton9.getText().equalsIgnoreCase("")){
+            this.gameButton9.setText("*");
+        }
+    }
+    
+    public boolean boolWinner(){
+        if (checkRow1Winner() || checkRow2Winner() || checkRow3Winner() ||
+            checkCol1Winner() || checkCol2Winner() || checkCol3Winner() ||
+            checkDiag1Winner()|| checkDiag2Winner()){
+            return true;
+        } 
+        return false;
     }
     
     public void declareWinner(){
