@@ -282,6 +282,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -294,6 +295,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -306,6 +308,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -318,6 +321,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -330,6 +334,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -342,6 +347,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         } 
@@ -354,6 +360,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -366,6 +373,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -378,6 +386,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
            checkTie();
            if (boolWinner()){
                endMoves();
+               setWinCount();
            }
            control.switchPlayer();
         }
@@ -394,6 +403,7 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         this.gameButton8.setText("");
         this.gameButton9.setText("");
         this.winnerLabel.setText("");
+        control.setPlayer("x");
     }//GEN-LAST:event_resetButtonActionPerformed
 
     public boolean checkRow1Winner(){
@@ -521,19 +531,22 @@ public class MainGameFrame extends javax.swing.JFrame implements ActionListener 
         return false;
     }
     
+    public void setWinCount(){ 
+        if (control.getPlayer().equalsIgnoreCase("x")){
+            control.setXWinCount(control.getXWinCount()+1);
+            this.xWinLabel.setText("X wins: "+control.getXWinCount());
+        }
+        if (control.getPlayer().equalsIgnoreCase("o")){
+            control.setOWinCount(control.getOWinCount()+1);
+            this.yWinLabel1.setText("O wins: "+control.getOWinCount());
+        }    
+    }
+    
     public void declareWinner(){
         if (checkRow1Winner() || checkRow2Winner() || checkRow3Winner() ||
             checkCol1Winner() || checkCol2Winner() || checkCol3Winner() ||
             checkDiag1Winner()|| checkDiag2Winner()){
-            winnerLabel.setText(control.getPlayer().toUpperCase() + " WINS!");
-                if (control.getPlayer().equalsIgnoreCase("x")){
-                    control.setXWinCount(control.getXWinCount()+1);
-                    this.xWinLabel.setText("X wins: "+control.getXWinCount());
-                }
-                if (control.getPlayer().equalsIgnoreCase("o")){
-                    control.setXWinCount(control.getXWinCount()+1);
-                    this.yWinLabel1.setText("O wins: "+control.getXWinCount());
-                }
+            winnerLabel.setText(control.getPlayer().toUpperCase() + " WINS!");    
         }
     }
 
