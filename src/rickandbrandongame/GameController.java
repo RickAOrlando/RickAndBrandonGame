@@ -58,7 +58,7 @@ public class GameController {
     /**
      * @return the yWinCount
      */
-    public int getYWinCount() {
+    public int getOWinCount() {
         return yWinCount;
     }
 
