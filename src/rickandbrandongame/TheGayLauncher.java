@@ -36,7 +36,9 @@ public class TheGayLauncher extends javax.swing.JFrame implements ActionListener
         launcherMenu = new javax.swing.JPanel();
         playTTTButton = new javax.swing.JButton();
         launcherTitle = new java.awt.Label();
-        jLabel1 = new javax.swing.JLabel();
+        ticTacToeLogo = new javax.swing.JLabel();
+        playTetrisButton = new javax.swing.JButton();
+        tetrisLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,9 +52,9 @@ public class TheGayLauncher extends javax.swing.JFrame implements ActionListener
         playTTTButton.setForeground(new java.awt.Color(255, 255, 255));
         playTTTButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
         playTTTButton.setLabel("Play Tic-Tac-Toe");
-        playTTTButton.setMaximumSize(new java.awt.Dimension(100, 200));
-        playTTTButton.setMinimumSize(new java.awt.Dimension(100, 200));
-        playTTTButton.setPreferredSize(new java.awt.Dimension(100, 200));
+        playTTTButton.setMaximumSize(new java.awt.Dimension(300, 100));
+        playTTTButton.setMinimumSize(new java.awt.Dimension(300, 100));
+        playTTTButton.setPreferredSize(new java.awt.Dimension(300, 100));
         playTTTButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playTTTButtonActionPerformed(evt);
@@ -65,16 +67,25 @@ public class TheGayLauncher extends javax.swing.JFrame implements ActionListener
         launcherTitle.setMinimumSize(new java.awt.Dimension(100, 200));
         launcherTitle.setText("Uber Gay Games™");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rickandbrandongame/tic-tac-toe.png"))); // NOI18N
-        jLabel1.setAutoscrolls(true);
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/rickandbrandongame/TTT.png"))); // NOI18N
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel1.setInheritsPopupMenu(false);
-        jLabel1.setMaximumSize(new java.awt.Dimension(200, 200));
-        jLabel1.setMinimumSize(new java.awt.Dimension(200, 200));
-        jLabel1.setPreferredSize(new java.awt.Dimension(200, 200));
-        jLabel1.setVerifyInputWhenFocusTarget(false);
+        ticTacToeLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rickandbrandongame/tic-tac-toe.png"))); // NOI18N
+        ticTacToeLogo.setAutoscrolls(true);
+        ticTacToeLogo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ticTacToeLogo.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/rickandbrandongame/TTT.png"))); // NOI18N
+        ticTacToeLogo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ticTacToeLogo.setInheritsPopupMenu(false);
+        ticTacToeLogo.setVerifyInputWhenFocusTarget(false);
+
+        playTetrisButton.setBackground(new java.awt.Color(63, 63, 63));
+        playTetrisButton.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        playTetrisButton.setForeground(new java.awt.Color(255, 255, 255));
+        playTetrisButton.setText("Play Tetris");
+        playTetrisButton.setToolTipText("");
+        playTetrisButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        playTetrisButton.setMaximumSize(new java.awt.Dimension(300, 100));
+        playTetrisButton.setMinimumSize(new java.awt.Dimension(300, 100));
+        playTetrisButton.setPreferredSize(new java.awt.Dimension(300, 100));
+
+        tetrisLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rickandbrandongame/Tetris-logo.png"))); // NOI18N
 
         javax.swing.GroupLayout launcherMenuLayout = new javax.swing.GroupLayout(launcherMenu);
         launcherMenu.setLayout(launcherMenuLayout);
@@ -82,26 +93,35 @@ public class TheGayLauncher extends javax.swing.JFrame implements ActionListener
             launcherMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(launcherMenuLayout.createSequentialGroup()
                 .addComponent(launcherTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 439, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103))
+                .addGap(103, 742, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, launcherMenuLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(playTTTButton, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addGroup(launcherMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, launcherMenuLayout.createSequentialGroup()
+                        .addComponent(tetrisLogo)
+                        .addGap(162, 162, 162)
+                        .addComponent(ticTacToeLogo)
+                        .addGap(82, 82, 82))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, launcherMenuLayout.createSequentialGroup()
+                        .addComponent(playTetrisButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(playTTTButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))))
         );
         launcherMenuLayout.setVerticalGroup(
             launcherMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(launcherMenuLayout.createSequentialGroup()
-                .addGroup(launcherMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(launcherMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tetrisLogo)
                     .addGroup(launcherMenuLayout.createSequentialGroup()
                         .addComponent(launcherTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(132, 132, 132))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, launcherMenuLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(playTTTButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(270, Short.MAX_VALUE))
+                        .addGap(132, 132, 132)
+                        .addComponent(ticTacToeLogo)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addGroup(launcherMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(playTTTButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(playTetrisButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -164,10 +184,12 @@ public class TheGayLauncher extends javax.swing.JFrame implements ActionListener
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel launcherMenu;
     private java.awt.Label launcherTitle;
     private javax.swing.JButton playTTTButton;
+    private javax.swing.JButton playTetrisButton;
+    private javax.swing.JLabel tetrisLogo;
+    private javax.swing.JLabel ticTacToeLogo;
     // End of variables declaration//GEN-END:variables
 
     @Override
