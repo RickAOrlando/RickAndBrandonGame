@@ -26,7 +26,7 @@ public class RickAndBrandonGame {
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new TheGayLauncher().setVisible(true);
+            new HomeMenu().setVisible(true);
         });
     }//End Main
 }//End Class
